@@ -4,7 +4,8 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link href="dist/css/index.min.css" rel="stylesheet">
+	<link href="/css/index.min.css" rel="stylesheet">
+	<link href="style/index.css" rel="stylesheet">
 	<title>portfolio</title>
 </head>
 
@@ -17,17 +18,11 @@
 		<a href="personel.html">prosonel</a>
 	</nav>
 	<section class="homePage">
+		<!-- all empty div are an spacer -->
 		<div class="circle"></div>
-		<div class="gardentTtoP gardentLigne"></div>
-		<img src="assets/code.svg" alt="code icon">
-		<div class="gardentPtoG gardentLigne"></div>
-		<img src="assets/University.svg" alt="University hat">
-		<div class="gardentGtoB gardentLigne"></div>
-		<img src="assets/code.svg" alt="code icon">
-		<div class="gardentBtoDP gardentLigne"></div>
-		<img src="assets/University.svg" alt="University hat">
-		<div class="gardentDPtoLP gardentLigne"></div>
-		<!-- content -->
+		<div></div>
+		<!-- presentation -->
+		<div class="TTP"></div>
 		<div class="homePageContent">
 			<h1>
 				Énée DI IORIO
@@ -35,6 +30,10 @@
 			mon
 			<div class="purpule"> parcours</div>
 		</div>
+		<!-- the pirate phone -->
+		<img class="icon" src="assets/code.svg" alt="code icon">
+		<div></div>
+		<div class="PTG"></div>
 		<div class="homePageContent">
 			<h1>
 				Jan 2024
@@ -42,7 +41,15 @@
 			</h1>
 			projet typeScrypt
 		</div>
-		<img src="assets/descriptor/tpp.png" alt="json presentation: the pirate phone: language typeScrypt, tech: mongodb, react and express, colaborator 2, users: 200">
+		<div class="card tppDescriptor">
+			<img class="DescriptorImage" src="assets/descriptor/tpp.png" alt="json presentation: the pirate phone: language typeScrypt, tech: mongodb, react and express, colaborator 2, users: 200">
+			<div class="glow"></div>
+		</div>
+		<div></div>
+		<!-- IUT info -->
+		<img class="icon" src="assets/University.svg" alt="University hat">
+		<div></div>
+		<div class="GTB"></div>
 		<div class="homePageContent">
 			<h1>
 				2024 - 2027
@@ -50,13 +57,25 @@
 			</h1>
 			grenoble (UGA)
 		</div>
+		<!-- menu vox -->
+		<img class="icon" src="assets/code.svg" alt="code icon">
+		<div></div>
+		<div class="BTP"></div>
 		<div class="homePageContent">
 			<h1>Aout 2022
 				<div class="blue">Menu Vaucanson</div>
 			</h1>
 			projet typeScrypt
 		</div>
-		<img src="assets/descriptor/menuVox.png" alt="json presentation: Menu Vaucanson language typeScrypt, tech: react and express, colaborator: 2, monthly users: 2500">
+		<div class="card menuVoxDescriptor">
+			<img class="DescriptorImage" src="assets/descriptor/menuVox.png" alt="json presentation: the pirate phone: language typeScrypt, tech: mongodb, react and express, colaborator 2, users: 200">
+			<div class="glow"></div>
+		</div>
+		<div></div>
+		<!-- Vaucanson -->
+		<img class="icon" src="assets/University.svg" alt="University hat">
+		<div></div>
+		<div class="LPTDP"></div>
 		<div class="homePageContent">
 			<h1>
 				2020 - 2023
@@ -65,6 +84,14 @@
 			grenoble (STI2D SIN)
 		</div>
 	</section>
+	<footer>
+		<address>
+			<a href="mailto:enee.diiorio+recrutement@gmail.com">enee.diiorio@gmail.com</a><br />
+			<a href="https://github.com/UnelDev">github.com/UnelDev</a>
+		</address>
+		© 2024 Enée DI IOIO
+	</footer>
 </body>
+<script type="text/javascript" src="card.js"></script>
 
 </html>

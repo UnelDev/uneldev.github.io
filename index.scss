@@ -20,7 +20,18 @@ body {
   background-color: $bacground-color;
   font-family: apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans",
     "Helvetica", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+  padding-left: 30vw;
 }
+
+* {
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: $mute-color;
+}
+// -------------- text color -------------- \\
 
 .purpule {
   color: $purple;
@@ -41,19 +52,11 @@ body {
   color: $dark-pink;
   display: inline;
 }
-.gardentLigne {
-  grid-column: 1;
-  height: 200px;
-  width: 4px;
-  margin: auto;
-  border-radius: 2px;
-}
+
+// -------------- nav -------------- \\
 
 nav {
-  width: 78vw;
   display: flex;
-  padding: 1vw 1vw;
-  padding-left: 20vw;
   gap: 2vw;
 
   a {
@@ -71,119 +74,148 @@ nav {
   }
 }
 
-.homePage {
-  width: 60vw;
-  color: $white;
-  margin: 5vh auto;
+// -------------- vertical -------------- \\
+
+.vertical {
+  grid-column: 1;
+  height: 200px;
+  width: 4px;
+  margin: auto;
+  border-radius: 2px;
+}
+
+.TTP {
+  @extend .vertical;
+  background: linear-gradient(#000000ff, $purple 30%);
+}
+
+.PTG {
+  @extend .vertical;
+  background: linear-gradient($purple, $green 20%);
+  grid-row: 4/6;
+  height: 100%;
+}
+
+.BTP {
+  @extend .vertical;
+  background: linear-gradient($blue, $ligh-pink);
+  grid-row: 9/11;
+  height: 100%;
+}
+
+.GTB {
+  @extend .vertical;
+  background: linear-gradient($green, $blue 90%);
+}
+
+.LPTDP {
+  @extend .vertical;
+  background: linear-gradient($ligh-pink, $dark-pink);
+}
+// ------------- home -------------- \\
+
+section.homePage {
+  margin: 8vh 0;
   display: grid;
-  align-items: center;
-  grid-template-columns: 8vw 52vw;
-  grid-column-gap: 0px;
-  grid-row-gap: 0px;
+  text-wrap: nowrap;
+  grid-template-columns: 200px min-content;
+  perspective: 1500px;
+  color: $mute-color;
 
-  .circle {
-    grid-column: 1;
-    border: 2px solid #ffffff4d;
-    height: 10px;
-    width: 10px;
-    border-radius: 50%;
-    margin: auto;
+  h1 {
+    color: white;
   }
 
-  .gardentTtoP {
-    background: linear-gradient(transparent, $purple 30%);
-  }
-
-  img:nth-child(3) {
-    grid-column: 1;
-    grid-row: 3;
-    height: 30px;
-    margin: auto;
-  }
-
-  .gardentPtoG {
-    background: linear-gradient($purple, $green 20%);
-    grid-row: 4/7;
-    height: 600px;
-  }
-
-  img:nth-child(5) {
-    grid-column: 1;
-    grid-row: 7;
-    height: 40px;
-    margin: auto;
-  }
-
-  .gardentGtoB {
-    background: linear-gradient($green, $blue 90%);
-    grid-row: 8;
-  }
-
-  img:nth-child(7) {
-    grid-column: 1;
-    grid-row: 9s;
-    height: 40px;
-    margin: auto;
-  }
-
-  .gardentBtoDP {
-    background: linear-gradient($blue, $dark-pink);
-    grid-column: 1;
-    grid-row: 10/13;
-    height: 570px;
-  }
-
-  img:nth-child(9) {
-    grid-column: 1;
-    grid-row: 14;
-    height: 40px;
-    margin: auto;
-  }
-
-  .gardentDPtoLP {
-    background: linear-gradient($dark-pink, $ligh-pink 90%);
-    grid-column: 1;
-    grid-row: 15;
-  }
-  // -------------- content -------------- \\
-
-  div.homePageContent:nth-child(11) {
-    grid-column: 2;
-    grid-row: 2;
-  }
-
-  div.homePageContent:nth-child(12) {
-    grid-column: 2;
-    grid-row: 4;
-  }
-
-  img:nth-child(13) {
+  .tppDescriptor {
+    width: 45vw;
+    height: auto;
     grid-row: 5;
-    grid-column: 1/2;
-    max-height: 300px;
-    margin: 60px;
-    box-shadow: 0 0 40px 50px $bacground-color;
   }
 
-  div.homePageContent:nth-child(14) {
-    grid-column: 2;
-    grid-row: 8;
-  }
-  div.homePageContent:nth-child(15) {
-    grid-column: 2;
+  .menuVoxDescriptor {
+    width: 45vw;
+    height: auto;
     grid-row: 10;
   }
 
-  img:nth-child(16) {
-    grid-row: 11;
-    grid-column: 1/2;
-    max-height: 300px;
-    margin: 60px;
-    box-shadow: 0 0 40px 50px $bacground-color;
+  .glow {
+    width: 45vw;
   }
 
-  .homePageContent:nth-child(17) {
-    grid-row: 15;
-    grid-column: 2;
+  .DescriptorImage {
+    width: 45vw;
+    box-shadow: 0 0 40px 30px $bacground-color;
   }
+
+  .card {
+    grid-column: 1/2;
+    margin: 4vh 0;
+    margin-left: 80px;
+  }
+
+  .homePageContent {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+// -------------- card -------------- \\
+
+.card {
+  font-weight: bold;
+  text-align: right;
+  color: #181a1a;
+  box-shadow: 0 1px 5px #00000099;
+
+  border-radius: 10px;
+  background-size: cover;
+
+  position: relative;
+
+  transition-duration: 300ms;
+  transition-property: transform, box-shadow;
+  transition-timing-function: ease-out;
+  transform: rotate3d(0);
+
+  .glow {
+    position: absolute;
+    height: 100%;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+    background-image: none;
+  }
+
+  .glow:hover {
+    background-image: radial-gradient(circle at 50% -20%, #ffffff22, #0000000f);
+  }
+}
+
+.card:hover {
+  transition-duration: 150ms;
+  box-shadow: 0 5px 20px 5px #00000044;
+}
+
+// -------------- footer -------------- \\
+
+footer {
+  margin-left: -30vh;
+  color: $mute-color;
+}
+
+// -------------- element -------------- \\
+
+.circle {
+  grid-column: 1;
+  border: 2px solid #ffffff4d;
+  height: 10px;
+  width: 10px;
+  border-radius: 50%;
+  margin: auto;
+}
+
+.icon {
+  grid-column: 1;
+  height: 30px;
+  margin: auto;
 }
