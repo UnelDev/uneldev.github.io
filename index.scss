@@ -20,6 +20,9 @@ $purple: #7c72ff;
 $typeScript: #3178c6;
 $cpp: #f34b7d;
 $html: #e34c26;
+$ubuntu: #e95420;
+$vscode: #0066b8;
+$vueJs: #42b883;
 
 body {
 	margin: 0;
@@ -202,9 +205,10 @@ section.projects {
 	}
 }
 
-// -------------- languages -------------- \\
+// -------------- languages & strucure-------------- \\
 
-section.languages {
+section.languages,
+section.strucure {
 	background-color: #ffffff0f;
 	width: 70vw;
 	margin: 8vh auto;
@@ -212,17 +216,20 @@ section.languages {
 
 	.progress {
 		display: flex;
+		align-items: center;
+		font-size: 2em;
+		height: 2em;
 	}
 
 	.progress > div:first-child {
-		height: 20px;
 		border-radius: $borderRadus 0 5px 0;
+		height: 2em;
+		box-shadow: 0 0 10px 10px #00000025;
 	}
 
 	.progress > div:last-child {
 		text-align: center;
 		width: 24%;
-		font-size: 2em;
 	}
 
 	.languageText {
@@ -242,7 +249,6 @@ section.languages:nth-child(2) > div:first-child {
 	div:last-child {
 		text-align: center;
 		width: 24%;
-		font-size: 2em;
 	}
 }
 
@@ -254,7 +260,43 @@ section.languages:nth-child(3) > div:first-child {
 	div:last-child {
 		text-align: center;
 		width: 75%;
-		font-size: 2em;
+	}
+}
+
+// -------------- strucure -------------- \\
+
+// for page see in languages
+
+section.strucure:nth-child(2) > div:first-child {
+	div:first-child {
+		background-color: $ubuntu;
+		width: 44%;
+	}
+	div:last-child {
+		text-align: center;
+		width: 55%;
+	}
+}
+
+section.strucure:nth-child(3) > div:first-child {
+	div:first-child {
+		background-color: $vscode;
+		width: 35%;
+	}
+	div:last-child {
+		text-align: center;
+		width: 65%;
+	}
+}
+
+section.strucure:nth-child(4) > div:first-child {
+	div:first-child {
+		background-color: $vueJs;
+		width: 22%;
+	}
+	div:last-child {
+		text-align: center;
+		width: 78%;
 	}
 }
 
