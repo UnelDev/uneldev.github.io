@@ -1,8 +1,8 @@
 @font-face {
-  font-family: "Helvetica";
-  font-style: normal;
-  font-weight: normal;
-  src: local("Helvetica"), url("/assets/fonts/Helvetica.woff") format("woff");
+	font-family: 'Helvetica';
+	font-style: normal;
+	font-weight: normal;
+	src: local('Helvetica'), url('/assets/fonts/Helvetica.woff') format('woff');
 }
 
 $bacground-color: #0d1117;
@@ -16,206 +16,236 @@ $blue: #33b3ae;
 $purple: #7c72ff;
 
 body {
-  margin: 0;
-  background-color: $bacground-color;
-  font-family: apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans",
-    "Helvetica", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
-  padding-left: 30vw;
+	margin: 0;
+	background-color: $bacground-color;
+	font-family: apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', 'Helvetica', Arial, sans-serif,
+		'Apple Color Emoji', 'Segoe UI Emoji';
 }
 
 * {
-  box-sizing: border-box;
+	box-sizing: border-box;
 }
 
 a {
-  text-decoration: none;
-  color: $mute-color;
+	text-decoration: none;
+	color: $mute-color;
 }
+
+a:hover {
+	text-decoration: underline;
+}
+
 // -------------- text color -------------- \\
 
 .purpule {
-  color: $purple;
-  display: inline;
+	color: $purple;
+	display: inline;
 }
 
 .green {
-  color: $green;
-  display: inline;
+	color: $green;
+	display: inline;
 }
 
 .blue {
-  color: $blue;
-  display: inline;
+	color: $blue;
+	display: inline;
 }
 
 .dark-Pink {
-  color: $dark-pink;
-  display: inline;
+	color: $dark-pink;
+	display: inline;
 }
 
 // -------------- nav -------------- \\
 
 nav {
-  display: flex;
-  gap: 2vw;
+	margin-left: 8vw;
+	display: flex;
+	gap: 2vw;
 
-  a {
-    color: $white;
-    text-decoration: none;
-  }
+	a {
+		color: $white;
+		text-decoration: none;
+	}
 
-  div:hover {
-    color: $mute-color;
-    cursor: pointer;
-  }
+	div:hover {
+		color: $mute-color;
+		cursor: pointer;
+	}
 
-  div {
-    padding: 1vw;
-  }
-}
-
-// -------------- vertical -------------- \\
-
-.vertical {
-  grid-column: 1;
-  height: 200px;
-  width: 4px;
-  margin: auto;
-  border-radius: 2px;
-}
-
-.TTP {
-  @extend .vertical;
-  background: linear-gradient(#000000ff, $purple 30%);
-}
-
-.PTG {
-  @extend .vertical;
-  background: linear-gradient($purple, $green 20%);
-  grid-row: 4/6;
-  height: 100%;
-}
-
-.BTP {
-  @extend .vertical;
-  background: linear-gradient($blue, $ligh-pink);
-  grid-row: 9/11;
-  height: 100%;
-}
-
-.GTB {
-  @extend .vertical;
-  background: linear-gradient($green, $blue 90%);
-}
-
-.LPTDP {
-  @extend .vertical;
-  background: linear-gradient($ligh-pink, $dark-pink);
-}
-// ------------- home -------------- \\
-
-section.homePage {
-  margin: 8vh 0;
-  display: grid;
-  text-wrap: nowrap;
-  grid-template-columns: 200px min-content;
-  perspective: 1500px;
-  color: $mute-color;
-
-  h1 {
-    color: white;
-  }
-
-  .tppDescriptor {
-    width: 45vw;
-    height: auto;
-    grid-row: 5;
-  }
-
-  .menuVoxDescriptor {
-    width: 45vw;
-    height: auto;
-    grid-row: 10;
-  }
-
-  .glow {
-    width: 45vw;
-  }
-
-  .DescriptorImage {
-    width: 45vw;
-    box-shadow: 0 0 40px 30px $bacground-color;
-  }
-
-  .card {
-    grid-column: 1/2;
-    margin: 4vh 0;
-    margin-left: 80px;
-  }
-
-  .homePageContent {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  }
-}
-// -------------- card -------------- \\
-
-.card {
-  font-weight: bold;
-  text-align: right;
-  color: #181a1a;
-  box-shadow: 0 1px 5px #00000099;
-
-  border-radius: 10px;
-  background-size: cover;
-
-  position: relative;
-
-  transition-duration: 300ms;
-  transition-property: transform, box-shadow;
-  transition-timing-function: ease-out;
-  transform: rotate3d(0);
-
-  .glow {
-    position: absolute;
-    height: 100%;
-    left: 0;
-    top: 0;
-    border-radius: 10px;
-    background-image: none;
-  }
-
-  .glow:hover {
-    background-image: radial-gradient(circle at 50% -20%, #ffffff22, #0000000f);
-  }
-}
-
-.card:hover {
-  transition-duration: 150ms;
-  box-shadow: 0 5px 20px 5px #00000044;
+	div {
+		padding: 1vw;
+	}
 }
 
 // -------------- footer -------------- \\
 
 footer {
-  margin-left: -30vh;
-  color: $mute-color;
+	margin-left: 8vw;
+	margin-bottom: 2vh;
+	color: $mute-color;
+}
+// -------------- vertical -------------- \\
+
+.vertical {
+	grid-column: 1;
+	height: 200px;
+	width: 4px;
+	margin: auto;
+	border-radius: 2px;
+}
+
+.TTP {
+	@extend .vertical;
+	background: linear-gradient(#000000ff, $purple 30%);
+}
+
+.PTG {
+	@extend .vertical;
+	background: linear-gradient($purple, $green 20%);
+	grid-row: 4/6;
+	height: 100%;
+}
+
+.BTP {
+	@extend .vertical;
+	background: linear-gradient($blue, $ligh-pink);
+	grid-row: 9/11;
+	height: 100%;
+}
+
+.GTB {
+	@extend .vertical;
+	background: linear-gradient($green, $blue 90%);
+}
+
+.LPTDP {
+	@extend .vertical;
+	background: linear-gradient($ligh-pink, $dark-pink);
+}
+// ------------- home -------------- \\
+
+section.homePage {
+	padding-left: 30vh;
+	margin: 8vh 0;
+	display: grid;
+	text-wrap: nowrap;
+	grid-template-columns: 200px min-content;
+	perspective: 1500px;
+	color: $mute-color;
+
+	h1 {
+		color: white;
+	}
+
+	.tppDescriptor {
+		width: 45vw;
+		height: auto;
+		grid-row: 5;
+	}
+
+	.menuVoxDescriptor {
+		width: 45vw;
+		height: auto;
+		grid-row: 10;
+	}
+
+	.glow {
+		width: 45vw;
+	}
+
+	.DescriptorImage {
+		width: 45vw;
+		box-shadow: 0 0 40px 30px $bacground-color;
+	}
+
+	.card {
+		grid-column: 1/2;
+		margin: 4vh 0;
+		margin-left: 80px;
+	}
+
+	.homePageContent {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+	}
+}
+
+// -------------- project -------------- \\
+
+section.project {
+	background-color: #ffffff0f;
+	color: white;
+	width: 70vw;
+	margin: 8vh auto;
+	padding: 4vh 6vw;
+	border-radius: 10px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+
+	* {
+		width: 80%;
+	}
+
+	a {
+		margin: 2vh 0;
+	}
+}
+
+// -------------- card -------------- \\
+
+.card {
+	font-weight: bold;
+	text-align: right;
+	color: #181a1a;
+	box-shadow: 0 1px 5px #00000099;
+
+	border-radius: 10px;
+	background-size: cover;
+
+	position: relative;
+
+	transition-duration: 300ms;
+	transition-property: transform, box-shadow;
+	transition-timing-function: ease-out;
+	transform: rotate3d(0);
+
+	.glow {
+		position: absolute;
+		height: 100%;
+		left: 0;
+		top: 0;
+		border-radius: 10px;
+		background-image: none;
+	}
+
+	.glow:hover {
+		background-image: radial-gradient(circle at 50% -20%, #ffffff22, #0000000f);
+	}
+}
+
+.card:hover {
+	transition-duration: 150ms;
+	box-shadow: 0 5px 20px 5px #00000044;
 }
 
 // -------------- element -------------- \\
 
 .circle {
-  grid-column: 1;
-  border: 2px solid #ffffff4d;
-  height: 10px;
-  width: 10px;
-  border-radius: 50%;
-  margin: auto;
+	grid-column: 1;
+	border: 2px solid #ffffff4d;
+	height: 10px;
+	width: 10px;
+	border-radius: 50%;
+	margin: auto;
 }
 
 .icon {
-  grid-column: 1;
-  height: 30px;
-  margin: auto;
+	grid-column: 1;
+	height: 30px;
+	margin: auto;
 }
