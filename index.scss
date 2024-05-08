@@ -5,6 +5,8 @@
 	src: local('Helvetica'), url('/assets/fonts/Helvetica.woff') format('woff');
 }
 
+$borderRadus: 10px;
+
 $bacground-color: #0d1117;
 $mute-color: #b7b8ba;
 $white: #e6edf3;
@@ -15,11 +17,16 @@ $dark-pink: #f778ba;
 $blue: #33b3ae;
 $purple: #7c72ff;
 
+$typeScript: #3178c6;
+$cpp: #f34b7d;
+$html: #e34c26;
+
 body {
 	margin: 0;
 	background-color: $bacground-color;
 	font-family: apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', 'Helvetica', Arial, sans-serif,
 		'Apple Color Emoji', 'Segoe UI Emoji';
+	color: white;
 }
 
 * {
@@ -173,15 +180,14 @@ section.homePage {
 	}
 }
 
-// -------------- project -------------- \\
+// -------------- projects -------------- \\
 
-section.project {
+section.projects {
 	background-color: #ffffff0f;
-	color: white;
 	width: 70vw;
 	margin: 8vh auto;
 	padding: 4vh 6vw;
-	border-radius: 10px;
+	border-radius: $borderRadus;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -196,6 +202,62 @@ section.project {
 	}
 }
 
+// -------------- languages -------------- \\
+
+section.languages {
+	background-color: #ffffff0f;
+	width: 70vw;
+	margin: 8vh auto;
+	border-radius: $borderRadus;
+
+	.progress {
+		display: flex;
+	}
+
+	.progress > div:first-child {
+		height: 20px;
+		border-radius: $borderRadus 0 5px 0;
+	}
+
+	.progress > div:last-child {
+		text-align: center;
+		width: 24%;
+		font-size: 2em;
+	}
+
+	.languageText {
+		padding: 4vh 6vw;
+
+		h1 {
+			font-size: 3em;
+		}
+	}
+}
+
+section.languages:nth-child(2) > div:first-child {
+	div:first-child {
+		background-color: $typeScript;
+		width: 76%;
+	}
+	div:last-child {
+		text-align: center;
+		width: 24%;
+		font-size: 2em;
+	}
+}
+
+section.languages:nth-child(3) > div:first-child {
+	div:first-child {
+		background-color: $cpp;
+		width: 15%;
+	}
+	div:last-child {
+		text-align: center;
+		width: 75%;
+		font-size: 2em;
+	}
+}
+
 // -------------- card -------------- \\
 
 .card {
@@ -204,7 +266,7 @@ section.project {
 	color: #181a1a;
 	box-shadow: 0 1px 5px #00000099;
 
-	border-radius: 10px;
+	border-radius: $borderRadus;
 	background-size: cover;
 
 	position: relative;
@@ -219,7 +281,7 @@ section.project {
 		height: 100%;
 		left: 0;
 		top: 0;
-		border-radius: 10px;
+		border-radius: $borderRadus;
 		background-image: none;
 	}
 
