@@ -52,6 +52,11 @@ a:hover {
 	display: inline;
 }
 
+.light-Pink {
+	color: $ligh-pink;
+	display: inline;
+}
+
 .green {
 	color: $green;
 	display: inline;
@@ -111,20 +116,6 @@ footer {
 	background: linear-gradient(#000000ff, $purple 30%);
 }
 
-.PTG {
-	@extend .vertical;
-	background: linear-gradient($purple, $green 20%);
-	grid-row: 4/6;
-	height: 100%;
-}
-
-.BTP {
-	@extend .vertical;
-	background: linear-gradient($blue, $ligh-pink);
-	grid-row: 9/11;
-	height: 100%;
-}
-
 .GTB {
 	@extend .vertical;
 	background: linear-gradient($green, $blue 90%);
@@ -180,6 +171,20 @@ section.homePage {
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
+	}
+
+	.PTG {
+		@extend .vertical;
+		background: linear-gradient($purple, $green 20%);
+		grid-row: 4/6;
+		height: 100%;
+	}
+
+	.BTP {
+		@extend .vertical;
+		background: linear-gradient($blue, $ligh-pink);
+		grid-row: 9/11;
+		height: 100%;
 	}
 }
 
@@ -297,6 +302,26 @@ section.strucure:nth-child(4) > div:first-child {
 	div:last-child {
 		text-align: center;
 		width: 78%;
+	}
+}
+
+// -------------- personel -------------- \\
+//see index page
+
+section.personel {
+	gap: 4px;
+
+	.PTG,
+	.BTP {
+		height: 200px;
+	}
+
+	.PTG {
+		background: linear-gradient($purple, $green);
+	}
+
+	.homePageContent {
+		height: 200px;
 	}
 }
 
