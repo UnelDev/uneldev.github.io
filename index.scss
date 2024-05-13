@@ -46,30 +46,32 @@ a:hover {
 }
 
 // -------------- text color -------------- \\
+div,
+h1 {
+	.purpule {
+		color: $purple;
+		display: inline;
+	}
 
-.purpule {
-	color: $purple;
-	display: inline;
-}
+	.light-Pink {
+		color: $ligh-pink;
+		display: inline;
+	}
 
-.light-Pink {
-	color: $ligh-pink;
-	display: inline;
-}
+	.green {
+		color: $green;
+		display: inline;
+	}
 
-.green {
-	color: $green;
-	display: inline;
-}
+	.blue {
+		color: $blue;
+		display: inline;
+	}
 
-.blue {
-	color: $blue;
-	display: inline;
-}
-
-.dark-Pink {
-	color: $dark-pink;
-	display: inline;
+	.dark-Pink {
+		color: $dark-pink;
+		display: inline;
+	}
 }
 
 // -------------- nav -------------- \\
@@ -375,6 +377,21 @@ section.personel {
 
 .icon {
 	grid-column: 1;
-	height: 30px;
+	height: 70px;
+	width: 70px;
+	padding: 20px;
 	margin: auto;
+}
+
+img.purpule {
+	background: radial-gradient(circle at center, rgba($purple, 0.2) 0, transparent 80%);
+}
+img.green {
+	background: radial-gradient(circle at center, rgba($green, 0.15) 0, transparent 80%);
+}
+img.blue {
+	background: radial-gradient(circle at center, rgba($blue, 0.2) 0, transparent 80%);
+}
+img.pink {
+	background: radial-gradient(circle at center, rgba($ligh-pink, 0.15) 0, transparent 80%);
 }
