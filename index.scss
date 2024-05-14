@@ -77,10 +77,18 @@ h1 {
 // -------------- nav -------------- \\
 
 nav {
-	margin-left: 8vw;
 	display: flex;
-	gap: 2vw;
-
+	align-items: center;
+	justify-content: center;
+	gap: 3vw;
+	position: sticky;
+	height: 8vh;
+	font-size: 2vh;
+	z-index: 2;
+	top: 0px;
+	background: transparent;
+	backdrop-filter: blur(10px);
+	transition-duration: 500ms;
 	a {
 		color: $white;
 		text-decoration: none;
@@ -95,7 +103,9 @@ nav {
 		padding: 1vw;
 	}
 }
-
+nav:hover {
+	backdrop-filter: blur(20px);
+}
 // -------------- footer -------------- \\
 
 footer {
