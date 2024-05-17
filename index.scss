@@ -276,8 +276,8 @@ section.strucure {
 section.languages:nth-child(2) > div:first-child {
 	div:first-child {
 		background-color: $typeScript;
+		animation: progressTS 500ms linear 500ms forwards;
 		width: 0%;
-		animation: progressTS 500ms linear 250s forwards;
 	}
 	div:last-child {
 		text-align: center;
