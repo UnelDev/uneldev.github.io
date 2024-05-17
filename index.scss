@@ -140,6 +140,11 @@ footer {
 	@extend .vertical;
 	background: linear-gradient($ligh-pink, $dark-pink);
 }
+
+.DPTP {
+	@extend .vertical;
+	background: linear-gradient($dark-pink, $purple);
+}
 // ------------- home -------------- \\
 
 .enterAnimation {
