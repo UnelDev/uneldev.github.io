@@ -139,6 +139,20 @@ footer {
 }
 // ------------- home -------------- \\
 
+.enterAnimation {
+	left: 20px;
+	opacity: 0;
+	animation: none;
+	animation-delay: 500ms;
+}
+
+@keyframes enterAnimationAnim {
+	100% {
+		transform: translateX(-20px);
+		opacity: 1;
+	}
+}
+
 section.homePage {
 	padding-left: 30vh;
 	margin: 8vh 0;
@@ -234,6 +248,7 @@ section.strucure {
 	.progress {
 		display: flex;
 		align-items: center;
+		justify-content: space-between;
 		font-size: 2em;
 		height: 2em;
 	}
@@ -261,22 +276,34 @@ section.strucure {
 section.languages:nth-child(2) > div:first-child {
 	div:first-child {
 		background-color: $typeScript;
-		width: 76%;
+		width: 0%;
+		animation: progressTS 500ms linear 250s forwards;
 	}
 	div:last-child {
 		text-align: center;
 		width: 24%;
+	}
+	@keyframes progressTS {
+		100% {
+			width: 76%;
+		}
 	}
 }
 
 section.languages:nth-child(3) > div:first-child {
 	div:first-child {
 		background-color: $cpp;
-		width: 15%;
+		animation: progressCPP 500ms linear 500ms forwards;
+		width: 0%;
 	}
 	div:last-child {
 		text-align: center;
 		width: 75%;
+	}
+	@keyframes progressCPP {
+		100% {
+			width: 15%;
+		}
 	}
 }
 
@@ -287,33 +314,51 @@ section.languages:nth-child(3) > div:first-child {
 section.strucure:nth-child(2) > div:first-child {
 	div:first-child {
 		background-color: $ubuntu;
-		width: 44%;
+		animation: progressUBUNTU 500ms linear 250ms forwards;
+		width: 0%;
 	}
 	div:last-child {
 		text-align: center;
 		width: 55%;
+	}
+	@keyframes progressUBUNTU {
+		100% {
+			width: 44%;
+		}
 	}
 }
 
 section.strucure:nth-child(3) > div:first-child {
 	div:first-child {
 		background-color: $vscode;
-		width: 35%;
+		animation: progressVSC 500ms linear 500ms forwards;
+		width: 0%;
 	}
 	div:last-child {
 		text-align: center;
 		width: 65%;
+	}
+	@keyframes progressVSC {
+		100% {
+			width: 35%;
+		}
 	}
 }
 
 section.strucure:nth-child(4) > div:first-child {
 	div:first-child {
 		background-color: $vueJs;
-		width: 22%;
+		animation: progressVUE 500ms linear 750ms forwards;
+		width: 0%;
 	}
 	div:last-child {
 		text-align: center;
 		width: 78%;
+	}
+	@keyframes progressVUE {
+		100% {
+			width: 22%;
+		}
 	}
 }
 

@@ -23,12 +23,10 @@ glows.forEach(glow => {
 	}
 
 	glow.addEventListener('mouseenter', () => {
-		console.log('enter');
 		glow.addEventListener('mousemove', handleMouseMove);
 	});
 
 	glow.addEventListener('mouseleave', () => {
-		console.log('exit');
 		glow.removeEventListener('mousemove', handleMouseMove);
 		glow.style.backgroundImage = `none`;
 	});
