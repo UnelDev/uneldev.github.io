@@ -19,7 +19,10 @@ $purple: #7c72ff;
 
 $typeScript: #3178c6;
 $cpp: #f34b7d;
+$c: #555555;
 $html: #e34c26;
+$java: #b07219;
+
 $ubuntu: #e95420;
 $vscode: #0066b8;
 $vueJs: #42b883;
@@ -275,35 +278,76 @@ section.strucure {
 
 section.languages:nth-child(2) > div:first-child {
 	div:first-child {
-		background-color: $typeScript;
-		animation: progressTS 500ms linear 500ms forwards;
+		background-color: $c;
+		animation: progressC 500ms linear 500ms forwards;
 		width: 0%;
 	}
 	div:last-child {
 		text-align: center;
-		width: 24%;
+		width: 55%;
 	}
-	@keyframes progressTS {
+	@keyframes progressC {
 		100% {
-			width: 76%;
+			width: 45%;
 		}
 	}
 }
 
 section.languages:nth-child(3) > div:first-child {
 	div:first-child {
-		background-color: $cpp;
-		animation: progressCPP 500ms linear 500ms forwards;
+		background-color: $typeScript;
+		animation: progressTS 500ms linear 750ms forwards;
 		width: 0%;
 	}
 	div:last-child {
 		text-align: center;
-		width: 75%;
+		width: 61%;
+	}
+	@keyframes progressTS {
+		100% {
+			width: 39%;
+		}
+	}
+}
+
+section.languages:nth-child(4) > div:first-child {
+	div:first-child {
+		background-color: $html;
+		animation: progressHTML 500ms linear 1000ms forwards;
+		width: 0%;
+	}
+	div:last-child {
+		text-align: center;
+		width: 81%;
+	}
+	@keyframes progressHTML {
+		100% {
+			width: 9%;
+		}
+	}
+}
+section.languages:nth-child(6) > div:first-child,
+section.languages:nth-child(5) > div:first-child {
+	div:first-child {
+		background-color: $cpp;
+		animation: progressCPP 500ms linear 1250ms forwards;
+		width: 0%;
+	}
+	div:last-child {
+		text-align: center;
+		width: 87%;
 	}
 	@keyframes progressCPP {
 		100% {
-			width: 15%;
+			width: 3%;
 		}
+	}
+}
+
+section.languages:nth-child(6) > div:first-child {
+	div:first-child {
+		background-color: $java;
+		animation: progressCPP 500ms linear 1500ms forwards;
 	}
 }
 
@@ -319,45 +363,45 @@ section.strucure:nth-child(2) > div:first-child {
 	}
 	div:last-child {
 		text-align: center;
-		width: 55%;
+		width: 43%;
 	}
 	@keyframes progressUBUNTU {
 		100% {
-			width: 44%;
+			width: 57%;
 		}
 	}
 }
 
 section.strucure:nth-child(3) > div:first-child {
 	div:first-child {
-		background-color: $vscode;
-		animation: progressVSC 500ms linear 500ms forwards;
-		width: 0%;
-	}
-	div:last-child {
-		text-align: center;
-		width: 65%;
-	}
-	@keyframes progressVSC {
-		100% {
-			width: 35%;
-		}
-	}
-}
-
-section.strucure:nth-child(4) > div:first-child {
-	div:first-child {
 		background-color: $vueJs;
-		animation: progressVUE 500ms linear 750ms forwards;
+		animation: progressVSC 500ms linear 500ms forwards;
 		width: 0%;
 	}
 	div:last-child {
 		text-align: center;
 		width: 78%;
 	}
-	@keyframes progressVUE {
+	@keyframes progressVSC {
 		100% {
 			width: 22%;
+		}
+	}
+}
+
+section.strucure:nth-child(4) > div:first-child {
+	div:first-child {
+		background-color: $vscode;
+		animation: progressVUE 500ms linear 750ms forwards;
+		width: 0%;
+	}
+	div:last-child {
+		text-align: center;
+		width: 80%;
+	}
+	@keyframes progressVUE {
+		100% {
+			width: 20%;
 		}
 	}
 }
