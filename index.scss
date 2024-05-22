@@ -152,11 +152,24 @@ footer {
 	opacity: 0;
 	animation: none;
 	animation-delay: 500ms;
+	transform: translateX(20px);
 }
 
 @keyframes enterAnimationAnim {
 	100% {
-		transform: translateX(-20px);
+		transform: translateX(0px);
+		opacity: 1;
+	}
+}
+
+.enterAnimationImage {
+	opacity: 0;
+	animation: none;
+	animation-delay: 500ms;
+}
+
+@keyframes enterAnimationImageAnim {
+	100% {
 		opacity: 1;
 	}
 }
@@ -498,4 +511,36 @@ img.blue {
 }
 img.pink {
 	background: radial-gradient(circle at center, rgba($ligh-pink, 0.15) 0, transparent 80%);
+}
+
+// -------------- responsive -------------- \\
+
+@media (max-width: 800px) {
+	section.homePage {
+		padding-left: 0;
+		grid-template-columns: 50px min-content;
+		.card {
+			width: 100%;
+			margin: 4vh 0;
+			margin-left: 10px;
+		}
+
+		.tppDescriptor,
+		.menuVoxDescriptor,
+		.DescriptorImage,
+		.glow {
+			width: 90vw;
+		}
+	}
+
+	div,
+	h1 {
+		.blue,
+		.light-Pink,
+		.dark-Pink,
+		.green,
+		.purpule {
+			display: block;
+		}
+	}
 }
