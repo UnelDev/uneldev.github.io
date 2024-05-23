@@ -48,6 +48,10 @@ a:hover {
 	text-decoration: underline;
 }
 
+.inlineText {
+	display: inline;
+}
+
 // -------------- text color -------------- \\
 div,
 h1 {
@@ -519,6 +523,7 @@ img.pink {
 	section.homePage {
 		padding-left: 0;
 		grid-template-columns: 50px min-content;
+		text-wrap: pretty;
 		.card {
 			width: 100%;
 			margin: 4vh 0;
@@ -538,8 +543,7 @@ img.pink {
 		.blue,
 		.light-Pink,
 		.dark-Pink,
-		.green,
-		.purpule {
+		.green {
 			display: block;
 		}
 	}
