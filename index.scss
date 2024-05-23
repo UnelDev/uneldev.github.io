@@ -543,4 +543,22 @@ img.pink {
 			display: block;
 		}
 	}
+
+	section.projects {
+		width: 90vw;
+		padding: 2vh 0.5vw;
+	}
+
+	section.languages,
+	section.strucure {
+		width: 90vw;
+		padding: 0vh 0.5vw;
+		h1 {
+			margin: 1vh 0;
+		}
+
+		.languageText {
+			padding: 1vh 6vw;
+		}
+	}
 }
