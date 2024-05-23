@@ -93,8 +93,8 @@ nav {
 	font-size: 2vh;
 	z-index: 2;
 	top: 0px;
-	background: transparent;
 	backdrop-filter: blur(10px);
+	background-color: rgba(255, 255, 255, 0.1);
 	transition-duration: 500ms;
 	a {
 		color: $white;

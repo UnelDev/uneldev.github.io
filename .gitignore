@@ -3,5 +3,4 @@
 *.sass.map
 *.scss.map
 dist/
-assets/descriptor/descriptorText/
 fiveserver.config.js

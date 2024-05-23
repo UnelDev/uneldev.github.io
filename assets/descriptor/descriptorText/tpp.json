@@ -1,0 +1,7 @@
+{
+	"name": "The pirate phone",
+	"language": ["TypeScript"],
+	"tech": ["mongodb", "react", "express"],
+	"colaborators": 2,
+	"users": 200
+}
