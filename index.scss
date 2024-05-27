@@ -94,7 +94,7 @@ nav {
 	z-index: 2;
 	top: 0px;
 	backdrop-filter: blur(10px);
-	background-color: rgba(255, 255, 255, 0.1);
+	background-color: rgba(255, 255, 255, 0.05);
 	transition-duration: 500ms;
 	a {
 		color: $white;
@@ -258,6 +258,14 @@ section.projects {
 
 	a {
 		margin: 2vh 0;
+	}
+
+	h1 {
+		font-size: 2em;
+	}
+
+	h2 {
+		font-size: 1.3em;
 	}
 }
 
