@@ -39,7 +39,7 @@ body {
 	box-sizing: border-box;
 }
 
-a {
+a:not(.likToProject) {
 	text-decoration: none;
 	color: $mute-color;
 }
@@ -252,12 +252,31 @@ section.projects {
 	justify-content: center;
 	align-items: center;
 
+	a div,
+	a h1 {
+		color: white;
+	}
+	a h1:hover {
+		text-decoration: underline;
+	}
+
+	.likToProject {
+		text-decoration: none;
+	}
+
 	* {
 		width: 80%;
 	}
 
-	a {
+	div:has(a) {
+		padding: 4vh 0;
+		width: 100%;
+	}
+
+	div a {
 		margin: 2vh 0;
+		width: min-content;
+		white-space: pre;
 	}
 
 	h1 {
